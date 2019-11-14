@@ -8,7 +8,6 @@ from io import BytesIO
 import uvicorn
 from starlette.applications import Starlette
 from starlette.responses import JSONResponse, HTMLResponse, RedirectResponse
-import sys
 import aiohttp
 import asyncio
 
