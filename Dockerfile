@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 
 EXPOSE 8008
 
-RUN python classifier.py
+CMD [ "python", "classifier.py" ]
