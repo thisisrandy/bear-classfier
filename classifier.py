@@ -1,6 +1,3 @@
-# mostly stolen from
-# https://github.com/simonw/cougar-or-not/blob/master/cougar.py
-
 import fastai
 from fastai.basic_train import load_learner
 from fastai.vision import open_image
