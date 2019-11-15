@@ -4,10 +4,10 @@ RUN apt update
 RUN apt install -y python3-dev gcc
 
 ADD requirements.txt requirements.txt
-ADD classifier.py classifier.py
-ADD bear-classifier.pkl bear-classifier.pkl
-
 RUN pip install -r requirements.txt
+
+ADD bear-classifier.pkl bear-classifier.pkl
+ADD classifier.py classifier.py
 
 EXPOSE 8008
 
