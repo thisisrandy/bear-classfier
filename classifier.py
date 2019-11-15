@@ -8,6 +8,7 @@ from starlette.applications import Starlette
 from starlette.responses import JSONResponse, HTMLResponse, RedirectResponse
 import aiohttp
 import asyncio
+import os
 
 fastai.torch_core.defaults.device = torch.device("cpu")
 learner = load_learner(".", "bear-classifier.pkl")
@@ -72,4 +73,5 @@ def redirect_to_homepage(request):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8008)
+    port = int(os.environ.get("PORT", 8008))
+    uvicorn.run(app, host="0.0.0.0", port=port)
